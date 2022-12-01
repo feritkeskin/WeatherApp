@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.imgSearchCityName.setOnClickListener {
             val cityName = binding.edtCityName.text.toString()
-            SET.putString("ciryName", cityName)
+            SET.putString("cityName", cityName)
             SET.apply()
             viewModel.refreshData(cityName)
             getLiveData()
