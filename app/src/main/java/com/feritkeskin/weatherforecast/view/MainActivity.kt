@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
-        var cName = GET.getString("cityName", "Şanlıurfa")
+        val cName = GET.getString("cityName", "Şanlıurfa")
         binding.edtCityName.setText(cName)
         viewModel.refreshData(cName!!)
 
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             binding.tvError.visibility = View.GONE
             binding.pbLoading.visibility = View.GONE
 
-            var cityName = GET.getString("cityName", cName)
+            val cityName = GET.getString("cityName", cName)
             binding.edtCityName.setText(cityName)
             viewModel.refreshData(cityName!!)
             binding.swipeRefreshLayout.isRefreshing = false
